@@ -1,0 +1,534 @@
+/* ====================================
+   GORILLA RUNNER - ADMIN CUSTOM THEME
+   Black & Red Color Scheme
+   ==================================== */
+
+:root {
+    --gorilla-red: #E50914;
+    --gorilla-red-dark: #b20710;
+    --gorilla-red-light: #ff1a24;
+    --gorilla-black: #0a0a0a;
+    --gorilla-dark: #141414;
+    --gorilla-gray: #1f1f1f;
+    --gorilla-light-gray: #2a2a2a;
+}
+
+/* Override Primary Colors */
+.bg-primary,
+.badge.bg-primary,
+.btn-primary {
+    background-color: var(--gorilla-red) !important;
+    border-color: var(--gorilla-red) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--gorilla-red-dark) !important;
+    border-color: var(--gorilla-red-dark) !important;
+}
+
+.text-primary {
+    color: var(--gorilla-red) !important;
+}
+
+.border-primary {
+    border-color: var(--gorilla-red) !important;
+}
+
+/* Background Colors */
+.bg-label-primary {
+    background-color: rgba(229, 9, 20, 0.12) !important;
+    color: var(--gorilla-red) !important;
+}
+
+/* Links */
+a {
+    color: var(--gorilla-red);
+}
+
+a:hover {
+    color: var(--gorilla-red-light);
+}
+
+/* Sidebar Styling */
+.layout-menu {
+    background-color: var(--gorilla-dark) !important;
+    box-shadow: 0 2px 6px 0 rgba(229, 9, 20, 0.1);
+}
+
+.menu-inner .menu-item.active > .menu-link {
+    background: linear-gradient(270deg, rgba(229, 9, 20, 0.7) 0%, rgba(229, 9, 20, 0.05) 100%) !important;
+    box-shadow: 0 2px 8px 0 rgba(229, 9, 20, 0.2) !important;
+}
+
+.menu-inner .menu-item.active > .menu-link,
+.menu-inner .menu-item.active > .menu-link .menu-icon,
+.menu-inner .menu-item.active > .menu-link > div {
+    color: var(--gorilla-red) !important;
+}
+
+.menu-item .menu-link:hover {
+    background-color: var(--gorilla-light-gray) !important;
+}
+
+.menu-header {
+    color: var(--gorilla-red) !important;
+}
+
+.app-brand-text {
+    color: var(--gorilla-red) !important;
+}
+
+/* Navbar */
+.layout-navbar,
+.bg-navbar-theme,
+.navbar,
+.navbar-expand-lg {
+    background: linear-gradient(90deg, #E50914 0%, #8B0000 50%, #E50914 100%) !important;
+    background-color: #E50914 !important;
+    background-image: linear-gradient(90deg, #E50914 0%, #8B0000 50%, #E50914 100%) !important;
+    box-shadow: 0 2px 6px 0 rgba(229, 9, 20, 0.4) !important;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Navbar Search */
+.layout-navbar .navbar-search-wrapper .search-input,
+.layout-navbar input.form-control {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+}
+
+.layout-navbar .navbar-search-wrapper .search-input::placeholder,
+.layout-navbar input.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.layout-navbar .navbar-search-wrapper .search-input:focus,
+.layout-navbar input.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Navbar Icons */
+.layout-navbar .navbar-nav .nav-link i,
+.layout-navbar .navbar-nav .notification-badge {
+    color: white !important;
+}
+
+/* Cards */
+.card {
+    background-color: var(--gorilla-gray) !important;
+    border-color: var(--gorilla-light-gray) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.card-header {
+    background-color: var(--gorilla-light-gray) !important;
+    border-bottom-color: rgba(229, 9, 20, 0.1) !important;
+}
+
+/* Tables */
+.table {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.table thead th {
+    background-color: var(--gorilla-light-gray) !important;
+    border-color: rgba(229, 9, 20, 0.1) !important;
+    color: white !important;
+}
+
+.table tbody tr {
+    border-color: var(--gorilla-light-gray) !important;
+}
+
+.table tbody tr:hover {
+    background-color: var(--gorilla-light-gray) !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: var(--gorilla-light-gray) !important;
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+    background-color: var(--gorilla-light-gray) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--gorilla-light-gray) !important;
+    border-color: var(--gorilla-red) !important;
+    color: white !important;
+    box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25) !important;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.form-label {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Buttons */
+.btn-secondary {
+    background-color: var(--gorilla-light-gray) !important;
+    border-color: var(--gorilla-light-gray) !important;
+    color: white !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--gorilla-gray) !important;
+    border-color: var(--gorilla-gray) !important;
+}
+
+.btn-outline-primary {
+    color: var(--gorilla-red) !important;
+    border-color: var(--gorilla-red) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--gorilla-red) !important;
+    color: white !important;
+}
+
+/* Badges */
+.badge.bg-label-success {
+    background-color: rgba(40, 167, 69, 0.12) !important;
+    color: #28a745 !important;
+}
+
+.badge.bg-label-warning {
+    background-color: rgba(255, 193, 7, 0.12) !important;
+    color: #ffc107 !important;
+}
+
+.badge.bg-label-danger {
+    background-color: rgba(220, 53, 69, 0.12) !important;
+    color: #dc3545 !important;
+}
+
+.badge.bg-label-info {
+    background-color: rgba(23, 162, 184, 0.12) !important;
+    color: #17a2b8 !important;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    background-color: var(--gorilla-dark) !important;
+    border-color: var(--gorilla-light-gray) !important;
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--gorilla-light-gray) !important;
+    color: white !important;
+}
+
+.dropdown-divider {
+    border-color: rgba(229, 9, 20, 0.1) !important;
+}
+
+/* Modals */
+.modal-content {
+    background-color: var(--gorilla-dark) !important;
+    border-color: var(--gorilla-light-gray) !important;
+}
+
+.modal-header {
+    background-color: var(--gorilla-gray) !important;
+    border-bottom-color: rgba(229, 9, 20, 0.1) !important;
+}
+
+.modal-footer {
+    border-top-color: rgba(229, 9, 20, 0.1) !important;
+}
+
+/* Pagination */
+.pagination .page-link {
+    background-color: var(--gorilla-light-gray) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--gorilla-gray) !important;
+    color: var(--gorilla-red) !important;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--gorilla-red) !important;
+    border-color: var(--gorilla-red) !important;
+}
+
+/* DataTables */
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter input {
+    background-color: var(--gorilla-light-gray) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Stats Cards & Avatar */
+.avatar-initial {
+    background-color: #0a0a0a !important;
+    color: white !important;
+}
+
+/* User Avatar in Navbar */
+.layout-navbar .navbar-nav .avatar,
+.layout-navbar .navbar-nav .avatar-initial {
+    background-color: #0a0a0a !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+}
+
+/* Text Colors */
+.text-muted {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.text-secondary {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white !important;
+}
+
+/* Body Background */
+body {
+    background-color: var(--gorilla-black) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.content-wrapper {
+    background-color: var(--gorilla-black) !important;
+}
+
+/* Footer */
+.content-footer {
+    background-color: var(--gorilla-dark) !important;
+    border-top-color: rgba(229, 9, 20, 0.1) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: transparent !important;
+}
+
+.breadcrumb-item a {
+    color: var(--gorilla-red) !important;
+}
+
+.breadcrumb-item.active {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Alerts */
+.alert-primary {
+    background-color: rgba(229, 9, 20, 0.12) !important;
+    border-color: var(--gorilla-red) !important;
+    color: var(--gorilla-red) !important;
+}
+
+/* Progress Bars */
+.progress {
+    background-color: var(--gorilla-light-gray) !important;
+}
+
+.progress-bar {
+    background-color: var(--gorilla-red) !important;
+}
+
+/* Switch/Toggle */
+.form-check-input:checked {
+    background-color: var(--gorilla-red) !important;
+    border-color: var(--gorilla-red) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gorilla-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gorilla-gray);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gorilla-light-gray);
+}
+
+/* Input Groups */
+.input-group-text {
+    background-color: var(--gorilla-light-gray) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+/* List Groups */
+.list-group-item {
+    background-color: var(--gorilla-gray) !important;
+    border-color: var(--gorilla-light-gray) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.list-group-item:hover {
+    background-color: var(--gorilla-light-gray) !important;
+}
+
+/* Nav Tabs */
+.nav-tabs .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    border-color: transparent !important;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--gorilla-gray) !important;
+    border-color: var(--gorilla-red) var(--gorilla-red) transparent !important;
+    color: white !important;
+}
+
+/* Accordion */
+.accordion-item {
+    background-color: var(--gorilla-gray) !important;
+    border-color: var(--gorilla-light-gray) !important;
+}
+
+.accordion-button {
+    background-color: var(--gorilla-light-gray) !important;
+    color: white !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--gorilla-red) !important;
+    color: white !important;
+}
+
+/* Select2 (if used) */
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    background-color: var(--gorilla-light-gray) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.select2-dropdown {
+    background-color: var(--gorilla-dark) !important;
+    border-color: var(--gorilla-light-gray) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--gorilla-red) !important;
+}
+
+/* Toast Notifications */
+.toast {
+    background-color: var(--gorilla-dark) !important;
+    border-color: var(--gorilla-light-gray) !important;
+    color: white !important;
+}
+
+.toast-header {
+    background-color: var(--gorilla-gray) !important;
+    border-bottom-color: rgba(229, 9, 20, 0.1) !important;
+}
+
+/* Spinner */
+.spinner-border-primary {
+    border-color: var(--gorilla-red) !important;
+    border-right-color: transparent !important;
+}
+
+/* Small Text */
+small {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* HR */
+hr {
+    border-color: rgba(229, 9, 20, 0.1) !important;
+}
+
+/* Offcanvas */
+.offcanvas {
+    background-color: var(--gorilla-dark) !important;
+}
+
+/* Popover & Tooltip */
+.popover {
+    background-color: var(--gorilla-dark) !important;
+    border-color: var(--gorilla-light-gray) !important;
+}
+
+.tooltip-inner {
+    background-color: var(--gorilla-red) !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: var(--gorilla-red) !important;
+}
+
+/* Custom Red Button Variant */
+.btn-gorilla {
+    background-color: var(--gorilla-red) !important;
+    border-color: var(--gorilla-red) !important;
+    color: white !important;
+}
+
+.btn-gorilla:hover {
+    background-color: var(--gorilla-red-dark) !important;
+    border-color: var(--gorilla-red-dark) !important;
+}
+
+/* Layout Page Background */
+.layout-page {
+    background-color: var(--gorilla-black) !important;
+}
+
+/* Menu Toggle Icon */
+.layout-menu-toggle {
+    color: var(--gorilla-red) !important;
+}
+
+/* Focus States */
+*:focus {
+    outline-color: var(--gorilla-red) !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+.btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25) !important;
+}
+

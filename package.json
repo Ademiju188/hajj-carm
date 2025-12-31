@@ -1,0 +1,28 @@
+{
+  "name": "hajj-registration-crm",
+  "version": "1.0.0",
+  "description": "Hajj Registration Form with CRM Admin Panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["hajj", "registration", "crm"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "sqlite3": "^5.1.6",
+    "nodemailer": "^6.9.7",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "bcrypt": "^5.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
+

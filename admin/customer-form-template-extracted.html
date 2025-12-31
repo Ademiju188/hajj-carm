@@ -1,0 +1,308 @@
+<!-- FORM -->
+        <form id="hajjForm" method="POST" action="api/submit-registration.php" enctype="multipart/form-data">
+            <div class="form-container">
+                <!-- Personal Information Section -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-user"></i> Personal Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="agent" class="required">Booking Agent</label>
+                            <select id="agent" name="agent" required>
+                                <option value="">Select Booking Agent</option>
+                                <option value="Mirza Travels (UK)">Mirza Travels (UK)</option>
+                                <option value="Al Ghani – Yasir Attari Bai (UK)">Al Ghani – Yasir Attari Bai (UK)</option>
+                                <option value="Al Amin Spiritual (UK & Europe)">Al Amin Spiritual (UK & Europe)</option>
+                                <option value="Mirza Amin (UK, Belgium, Norway)">Mirza Amin (UK, Belgium, Norway)</option>
+                                <option value="Hamza Abdoelbasier (Holland)">Hamza Abdoelbasier (Holland)</option>
+                                <option value="Hussain Abdoelbasier (Holland)">Hussain Abdoelbasier (Holland)</option>
+                                <option value="Hafiz Tahir (Portugal, Italy, Germany & France)">Hafiz Tahir (Portugal, Italy, Germany & France)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="title" class="required">Title</label>
+                            <select id="title" name="title" required>
+                                <option value="">Select Title</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Miss">Miss</option>
+                                <option value="Ms">Ms</option>
+                                <option value="Dr">Dr</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="firstName" class="required">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                    </div>
+                    
+                    <div class="form-row-3">
+                        <div class="form-group">
+                            <label for="middleName1">Middle Name 1</label>
+                            <input type="text" id="middleName1" name="middleName1" placeholder="Optional">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="middleName2">Middle Name 2</label>
+                            <input type="text" id="middleName2" name="middleName2" placeholder="Optional">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="middleName3">Middle Name 3</label>
+                            <input type="text" id="middleName3" name="middleName3" placeholder="Optional">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName" class="required">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob" class="required">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pob" class="required">Place of Birth</label>
+                            <input type="text" id="pob" name="pob" placeholder="City, Country" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Information Section -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-address-card"></i> Contact Details</h3>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 0 0 200px;">
+                            <label for="mobileCountryCode" class="required">Country Dialing Code</label>
+                            <select id="mobileCountryCode" name="mobileCountryCode" required style="width: 100%;">
+                                <option value="">Select Code</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="mobile" class="required">Mobile Number</label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="1234 567890" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address" class="required">House Number & Street Name</label>
+                        <input type="text" id="address" name="address" placeholder="House number and street name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="town" class="required">Town/City</label>
+                            <input type="text" id="town" name="town" placeholder="Enter your city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="district" class="required">District/County/Province</label>
+                            <input type="text" id="district" name="district" placeholder="Enter district/county/province" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="postcode" class="required">Postcode</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="e.g., BD8 8QA" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country" class="required">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Emergency Contact Section -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-phone-alt"></i> Emergency Contact (Country of Residence)</h3>
+                    
+                    <div class="form-group">
+                        <label for="emergencyName" class="required">Emergency Contact Name</label>
+                        <input type="text" id="emergencyName" name="emergencyName" placeholder="Full name of emergency contact" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emergencyAddress" class="required">Emergency Contact Address</label>
+                        <textarea id="emergencyAddress" name="emergencyAddress" rows="3" placeholder="Full address in your country of residence" required></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 0 0 200px;">
+                            <label for="emergencyCountryCode" class="required">Country Dialing Code</label>
+                            <select id="emergencyCountryCode" name="emergencyCountryCode" required style="width: 100%;">
+                                <option value="">Select Code</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="emergencyContact" class="required">Emergency Contact Number</label>
+                            <input type="tel" id="emergencyContact" name="emergencyContact" placeholder="Emergency phone number" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="emergencyCountry" class="required">Country</label>
+                            <select id="emergencyCountry" name="emergencyCountry" required>
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="emergencyRelationship" class="required">Relationship</label>
+                            <div class="relationship-container">
+                                <select id="emergencyRelationship" name="emergencyRelationship" required>
+                                    <option value="">Select Relationship</option>
+                                    <option value="Father">Father</option>
+                                    <option value="Mother">Mother</option>
+                                    <option value="Sister">Sister</option>
+                                    <option value="Brother">Brother</option>
+                                    <option value="Daughter">Daughter</option>
+                                    <option value="Son">Son</option>
+                                    <option value="Aunty">Aunty</option>
+                                    <option value="Uncle">Uncle</option>
+                                    <option value="Grandad">Grandad</option>
+                                    <option value="Grandmother">Grandmother</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                
+                                <div class="other-relationship" id="otherRelationshipContainer" style="display: none;">
+                                    <label for="otherRelationship">Specify Relationship</label>
+                                    <input type="text" id="otherRelationship" name="otherRelationship" placeholder="Enter relationship">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Passport & Travel Details Section -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-passport"></i> Passport Details</h3>
+                    
+                    <div class="form-group">
+                        <label for="passportNumber" class="required">Passport Number</label>
+                        <input type="text" id="passportNumber" name="passportNumber" placeholder="Enter passport number" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="issueDate" class="required">Issue Date</label>
+                            <input type="date" id="issueDate" name="issueDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="expiryDate" class="required">Expiry Date</label>
+                            <input type="date" id="expiryDate" name="expiryDate" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="passportCountryOfIssue" class="required">Passport Country of Issue</label>
+                        <select id="passportCountryOfIssue" name="passportCountryOfIssue" required>
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="passportPicture" class="required">Passport Picture</label>
+                            <input type="file" id="passportPicture" name="passportPicture" accept="image/jpeg,image/jpg,image/png" required>
+                            <p class="form-note">Upload your personal passport picture with white background (JPEG, PNG - Max 18KB)</p>
+                            <div id="passportPicturePreview" class="file-preview" style="display: none; margin-top: 10px;">
+                                <img id="passportPictureImg" src="" alt="Passport Picture Preview" style="max-width: 200px; max-height: 200px; border-radius: 6px; border: 2px solid #ddd;">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="passportDocument" class="required">Passport Document (First 2 Pages)</label>
+                            <input type="file" id="passportDocument" name="passportDocument" accept="image/jpeg,image/jpg,image/png" required>
+                            <p class="form-note">Upload clear first 2 pages of the passport (JPEG, PNG - Max 1MB)</p>
+                            <div id="passportDocumentPreview" class="file-preview" style="display: none; margin-top: 10px;">
+                                <div id="passportDocumentInfo" style="padding: 10px; background: #f8f9fa; border-radius: 6px; border: 2px solid #ddd;">
+                                    <i class="fas fa-file"></i> <span id="passportDocumentName"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Travel Companions Section -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-users"></i> Travel Companions</h3>
+                    <p class="form-note">List people traveling with you (maximum 10). If traveling alone, leave blank.</p>
+                    
+                    <div class="input-group" id="travelCompanionsGroup">
+                        <div class="travelers-grid" id="travelCompanionsContainer">
+                            <!-- Travel companions will be added here dynamically -->
+                        </div>
+                        <button type="button" class="add-btn" id="addTravelCompanion">
+                            <i class="fas fa-plus"></i> Add Travel Companion
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Accommodation Preferences Section -->
+                <div class="form-section">
+                    <h3 class="section-title"><i class="fas fa-bed"></i> Accommodation Preferences</h3>
+                    
+                    <div class="form-group">
+                        <label for="package" class="required">Package Selection</label>
+                        <select id="package" name="package" required>
+                            <option value="">Select Package</option>
+                            <option value="Standard" data-rooms='["Double (2)", "Triple (3)", "Quad (4)"]' data-max-occupancy="4">Standard</option>
+                            <option value="Premium" data-rooms='["Double (2)", "Triple (3)"]' data-max-occupancy="3">Premium</option>
+                            <option value="Luxury" data-rooms='["Double (2)"]' data-max-occupancy="2">Luxury</option>
+                        </select>
+                        <p class="form-note" id="packageDescription"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="roomSize" class="required">Room Type</label>
+                        <select id="roomSize" name="roomSize" required disabled>
+                            <option value="">Select Package first</option>
+                        </select>
+                        <p class="form-note" id="roomSizeDescription"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="roomSharing" class="required">Room Sharing Preferences</label>
+                        <p class="form-note">Enter names of people you wish to share room with (2-4 names)</p>
+                        
+                        <div class="input-group" id="roommatesGroup">
+                            <div class="roommates-grid" id="roommatesContainer">
+                                <!-- Roommates will be added here dynamically -->
+                            </div>
+                            <button type="button" class="add-btn" id="addRoommate">
+                                <i class="fas fa-plus"></i> Add Roommate
+                            </button>
+                            <button type="button" class="remove-btn" id="removeRoommate" style="display: none;">
+                                <i class="fas fa-minus"></i> Remove Last Roommate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Registration
+                </button>
+                <button type="reset" class="reset-btn">
+                    <i class="fas fa-redo"></i> Clear Form
+                </button>
+            </div>
+        </form>
