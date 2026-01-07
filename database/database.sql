@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin_users`
 --
 CREATE DATABASE hajj_crm;
-CREATE USER 'hajj_crm'@'localhost' IDENTIFIED BY 'strongpassword';
-GRANT ALL PRIVILEGES ON hajj_registration_crm.* TO 'hajj_crm'@'localhost';
+CREATE USER 'hajj_crm'@'localhost' IDENTIFIED BY 'Q!W@E#R$T%Y^U&I*O(P)';
+GRANT ALL PRIVILEGES ON hajj_crm.* TO 'hajj_crm'@'localhost';
 FLUSH PRIVILEGES;
 EXIT;
 

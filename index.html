@@ -341,8 +341,8 @@
             <h3><i class="fas fa-info-circle"></i> Important Information (Please Read)</h3>
             <ul style="list-style-type: disc; margin-left: 20px;">
                 <li>Fields marked with <span style="color: #e53e3e; font-weight: 700;">*</span> are required</li>
-                <li>Upload the first 2 pages of your passport (JPEG or PNG, max 1MB)</li>
-                <li>Upload one passport photo with a white background (JPEG or PNG, max 18KB)</li>
+                <li>Upload the first 2 pages of your passport (JPEG or PNG, any size)</li>
+                <li>Upload one passport photo with a white background (JPEG or PNG, any size)</li>
                 <li>Make sure all passport details match your official documents exactly</li>
                 <li>Your emergency contact must be in the same country where you live</li>
                 <li>Check all details carefully before submitting</li>
@@ -578,7 +578,7 @@
                         <div class="form-group">
                             <label for="passportPicture" class="required">Passport Picture</label>
                             <input type="file" id="passportPicture" name="passportPicture" accept="image/jpeg,image/jpg,image/png" required>
-                            <p class="form-note">Upload your personal passport picture with white background (JPEG, PNG - Max 18KB)</p>
+                            <p class="form-note">Upload your personal passport picture with white background (JPEG, PNG - Any size)</p>
                             <div id="passportPicturePreview" class="file-preview" style="display: none; margin-top: 10px;">
                                 <img id="passportPictureImg" src="" alt="Passport Picture Preview" style="max-width: 200px; max-height: 200px; border-radius: 6px; border: 2px solid #ddd;">
                             </div>
@@ -587,7 +587,7 @@
                         <div class="form-group">
                             <label for="passportDocument" class="required">Passport Document (First 2 Pages)</label>
                             <input type="file" id="passportDocument" name="passportDocument" accept="image/jpeg,image/jpg,image/png" required>
-                            <p class="form-note">Upload clear first 2 pages of the passport (JPEG, PNG - Max 1MB)</p>
+                            <p class="form-note">Upload clear first 2 pages of the passport (JPEG, PNG - Any size)</p>
                             <div id="passportDocumentPreview" class="file-preview" style="display: none; margin-top: 10px;">
                                 <div id="passportDocumentInfo" style="padding: 10px; background: #f8f9fa; border-radius: 6px; border: 2px solid #ddd;">
                                     <i class="fas fa-file"></i> <span id="passportDocumentName"></span>
@@ -794,13 +794,7 @@
             passportPicture.addEventListener('change', function(e) {
                 const file = e.target.files[0];
                 if (file) {
-                    const maxSize = 18 * 1024; // 18KB
-                    if (file.size > maxSize) {
-                        alert('Passport picture must be 18KB or less. Current file size: ' + (file.size / 1024).toFixed(2) + ' KB');
-                        e.target.value = '';
-                        document.getElementById('passportPicturePreview').style.display = 'none';
-                        return;
-                    }
+
                     
                     if (!['image/jpeg', 'image/jpg', 'image/png'].includes(file.type)) {
                         alert('Passport picture must be JPEG or PNG format');
@@ -821,13 +815,13 @@
             passportDocument.addEventListener('change', function(e) {
                 const file = e.target.files[0];
                 if (file) {
-                    const maxSize = 1 * 1024 * 1024; // 1MB
+                    /*const maxSize = 1 * 1024 * 1024; // 1MB
                     if (file.size > maxSize) {
                         alert('Passport document must be 1MB or less. Current file size: ' + (file.size / 1024 / 1024).toFixed(2) + ' MB');
                         e.target.value = '';
                         document.getElementById('passportDocumentPreview').style.display = 'none';
                         return;
-                    }
+                    }*/
                     
                     if (!['image/jpeg', 'image/jpg', 'image/png'].includes(file.type)) {
                         alert('Passport document must be JPEG or PNG format');

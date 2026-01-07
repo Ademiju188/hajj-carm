@@ -46,13 +46,13 @@ try {
     }
     
     // Handle file uploads with specific size limits
-    // Passport picture: Max 18KB
-    // Passport document: Max 1MB (first 2 pages, JPEG/PNG only)
+    // Passport picture: Unrestricted (limit set high to 50MB) (was 18KB)
+    // Passport document: Unrestricted (limit set high to 50MB) (was 1MB)
     $passportPictureTypes = ['image/jpeg', 'image/jpg', 'image/png'];
     $passportDocumentTypes = ['image/jpeg', 'image/jpg', 'image/png'];
     
-    $passportPicture = uploadFile($_FILES['passportPicture'], 'passport_pictures', 18 * 1024, $passportPictureTypes); // 18KB
-    $passportDocument = uploadFile($_FILES['passportDocument'], 'passport_documents', 1 * 1024 * 1024, $passportDocumentTypes); // 1MB
+    $passportPicture = uploadFile($_FILES['passportPicture'], 'passport_pictures', 50 * 1024 * 1024, $passportPictureTypes); 
+    $passportDocument = uploadFile($_FILES['passportDocument'], 'passport_documents', 50 * 1024 * 1024, $passportDocumentTypes);
     
     if (!$passportPicture || !$passportDocument) {
         http_response_code(400);
