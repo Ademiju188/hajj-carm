@@ -381,6 +381,9 @@ $detailedCustomers = $stmt->fetchAll();
                                             <a href="customer-details.php?id=<?php echo $customer['id']; ?>" class="btn btn-sm btn-primary">
                                                 <i class="iconify" data-icon="mdi:eye"></i> View
                                             </a>
+                                            <button type="button" class="btn btn-sm btn-danger delete-customer-btn" data-id="<?php echo $customer['id']; ?>">
+                                                <i class="iconify" data-icon="mdi:trash-can"></i> Delete
+                                            </button>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -464,6 +467,42 @@ $(document).ready(function() {
             },
             emptyTable: "No customers found",
             zeroRecords: "No matching records found"
+        }
+    });
+
+
+    // Handle delete button click
+    $(document).on('click', '.delete-customer-btn', function() {
+        const id = $(this).data('id');
+        const row = $(this).closest('tr');
+        
+        if (confirm('Are you sure you want to delete this record? This will permanently delete the customer data and associated files.')) {
+            // Show loading state
+            const btn = $(this);
+            const originalContent = btn.html();
+            btn.prop('disabled', true).html('<i class="iconify" data-icon="line-md:loading-loop"></i>');
+            
+            $.ajax({
+                url: 'api/delete-customer.php',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ id: id }),
+                success: function(response) {
+                    if (response.success) {
+                        // Remove row from DataTable
+                        const table = $('#detailedReportTable').DataTable();
+                        table.row(row).remove().draw();
+                        // Optional: Show toast or alert
+                    } else {
+                        alert('Error: ' + response.error);
+                        btn.prop('disabled', false).html(originalContent);
+                    }
+                },
+                error: function(xhr) {
+                    alert('Error: ' + (xhr.responseJSON ? xhr.responseJSON.error : 'Unknown error'));
+                    btn.prop('disabled', false).html(originalContent);
+                }
+            });
         }
     });
 });
